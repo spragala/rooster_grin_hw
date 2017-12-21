@@ -18,9 +18,9 @@ $orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
 body {
   font-family: $roboto-font;
   background: $orange-grad;
-  font-size: 14px;
   font-weight: normal;
-  line-height: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 // Headings
@@ -37,4 +37,12 @@ h1, h2 {
 h3 {
   font-size: 20px;
   letter-spacing: 2px;
+}
+
+// text
+
+p {
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0;
 }
