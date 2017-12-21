@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -15,12 +16,24 @@ module.exports = {
 		inline: true
 	},
 
-	//Add sass-loader
+// Plugin to use .pug template
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './index.pug',
+			inject: true
+		})
+	],
+
+	//Add loaders
 	module: {
 		loaders: [
       {
-        test: /\.html$/,
-        loader: "raw-loader"
+        test: /\.pug$/,
+        use: [{
+					loader: "raw-loader"
+				}, {
+					loader: "pug-html-loader"
+				}]
       },
 			{
 				test: /\.(scss)$/,
@@ -31,7 +44,7 @@ module.exports = {
 				}, {
 					loader: 'sass-loader'
 				}]
-			}
+			},
 		]
 	}
 }
