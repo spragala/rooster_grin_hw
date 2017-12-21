@@ -1,0 +1,40 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+$roboto-font: 'Roboto', sans-serif;
+
+// Colors
+$dark-blue: #283647;
+$blue: #1676DD;
+$orange: #F36819;
+$ochre: #F7931D;
+
+// Gradients
+$blue-grad: linear-gradient(90deg, $blue, #0C4078);
+$hero-grad: linear-gradient(90deg, #F36819, #000);
+$orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
+
+// Body Style
+body {
+  font-family: $roboto-font;
+  background: $orange-grad;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+// Headings
+.hero-image-text {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
