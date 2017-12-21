@@ -4,7 +4,8 @@
   "description": "Test",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "dev": "webpack-dev-server --hot --inline",
+    "prod": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

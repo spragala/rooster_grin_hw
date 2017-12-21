@@ -5,8 +5,8 @@ module.exports = {
 	entry: './src/app.js',
 
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.js'
+		path: path.resolve(__dirname, "dist"),
+		filename: 'bundle.js'
 	},
 
 	watch: true,
@@ -23,7 +23,7 @@ module.exports = {
         loader: "raw-loader"
       },
 			{
-				test: /\.(css)$/,
+				test: /\.(scss)$/,
 				use: [{
 					loader: 'style-loader'
 				}, {
