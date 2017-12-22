@@ -43,10 +43,12 @@ module.exports = {
 					loader: 'sass-loader'
 				}]
 			},
+			// images
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				use: 'file-loader?name=[name].[ext]&outputPath=images/'
 			},
+			// bootstrap fonts
 			{
 				test: /\.(woff2?|svg)$/,
 				 use: [{
