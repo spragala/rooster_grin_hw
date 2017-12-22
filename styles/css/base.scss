@@ -1,0 +1,82 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+$roboto-font: 'Roboto', sans-serif;
+
+// Colors
+$dark-blue: #283647;
+$blue: #1676DD;
+$orange: #F36819;
+$ochre: #F7931D;
+
+// Gradients
+$blue-grad: linear-gradient(90deg, $blue, #0C4078);
+$hero-grad: linear-gradient(90deg, #F36819, #000);
+$orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
+
+// Body Style
+body {
+  font-family: $roboto-font;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased
+}
+
+// Headings
+.hero-image-text {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+// Plain Text
+p {
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0;
+}
+
+// Buttons
+.btn {
+  background: $orange-grad;
+  font-size: 16px;
+  color: #fff;
+  width: 215px;
+  height: 40px;
+  letter-spacing: 2px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+
+  &:hover {
+    opacity: 0.7;
+    color: #fff;
+  }
+}
+
+// Flex Classes
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+// Custom Columns
+.col-1 {
+  width: 944px;
+  margin: 0 10px;
+}
