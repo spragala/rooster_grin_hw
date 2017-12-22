@@ -6,8 +6,20 @@ html
     
   body
     include includes/nav.pug
-    .main
+    .main.container
       h1.hero-image-text Hello World
       p This is text <br/>
       p This is also text
+      .btn(type="button" data-toggle="modal" data-target="#modal") Hello
+    .modal.fade#modal(tabindex="-1" role="dialog" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            p.modal-title This is the title
+            button.close(type="button" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true")
+          .modal-body
+            p content
+          .modal-footer
+            button.btn.btn-secondary(type="button" data-dismiss="modal") Close        
       
