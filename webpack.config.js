@@ -45,7 +45,7 @@ module.exports = {
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: 'file-loader?name=[path][name].[ext]'
+				use: 'file-loader?name=[name].[ext]&outputPath=images/'
 			},
 			{
 				test: /\.(woff2?|svg)$/,
