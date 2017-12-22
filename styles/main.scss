@@ -17,10 +17,10 @@ $orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
 // Body Style
 body {
   font-family: $roboto-font;
-  background: $orange-grad;
   font-weight: normal;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased
 }
 
 // Headings
@@ -39,7 +39,7 @@ h3 {
   letter-spacing: 2px;
 }
 
-// text
+// Plain Text
 
 p {
   line-height: 20px;
@@ -47,22 +47,24 @@ p {
   margin: 0;
 }
 
+// Buttons
+
 .btn {
-  background-color: $dark-blue;
+  background: $orange-grad;
+  font-size: 16px;
   color: #fff;
+  width: 215px;
+  height: 40px;
+  letter-spacing: 2px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -2px 3px 5px -2px #666;
 }
+
+@import 'css/home-nav';
+
 
 // .nav-back {
 //   background: url('../assets/hero-img.jpg')
 // }
-
-.logo {
-  margin-top: 10px;
-  height: 40px;
-}
-
-nav {
-  text-align: center;
-  background-color: $blue;
-  height: 60px;
-}
