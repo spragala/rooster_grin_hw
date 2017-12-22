@@ -1,4 +1,12 @@
 section.carousel
+  .carousel-overlay
+    .btn.mail-btn(type="button" data-toggle="modal" data-target="#modal")
+      img(src="../assets/envelope-icon.svg")
+    .carousel-content.flex.flex-center
+      .col-1
+        h4.hero-image-text Lorem Ipsum Lorem Ipsum
+        .btn Button
+  .carousel-fill  
   .carousel.slide#hero-carousel(data-ride="carousel")
     ol.carousel-indicators
       li.indicators.active(data-target="#hero-carousel" data-slide-to="0")
