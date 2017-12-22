@@ -19,7 +19,7 @@ module.exports = {
 // Plugin to use .pug template
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './index.pug',
+			template: './views/index.pug',
 			inject: true
 		})
 	],
