@@ -1,0 +1,25 @@
+#documents {
+  margin-top: 107px;
+}
+
+.media-left {
+  padding-right: 50px;
+}
+
+.media:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+@media (max-width: $break-med) {
+  .media {
+    margin: 0 20px 50px 20px;
+  }
+
+  .media-left {
+    padding-right: 25px;
+  }
+
+  .media-body {
+    padding-right: 10px;
+  }
+}

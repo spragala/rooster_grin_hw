@@ -85,6 +85,11 @@ p {
   margin: 0 10px;
 }
 
+.col-2 {
+  width: 417px;
+  margin: 0 45px;
+}
+
 // Break points
 $break-med: 944px;
 
@@ -95,5 +100,10 @@ $break-med: 944px;
 
   .col-1 {
     max-width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+    margin: 0 10px;
   }
 }
