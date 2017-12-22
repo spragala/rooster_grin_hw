@@ -3,28 +3,26 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/app.js',
-
+	entry: {
+		bootstrap: 'bootstrap-loader',
+		app: './src/app.js'
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	},
-
 	watch: true,
-
 	devServer: {
 		inline: true
 	},
-
 // Plugin to use .pug template
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './index.pug',
+			template: './views/index.pug',
 			inject: true
 		})
 	],
-
-	//Add loaders
+//Add loaders
 	module: {
 		loaders: [
       {
@@ -43,6 +41,25 @@ module.exports = {
 					loader: 'css-loader'
 				}, {
 					loader: 'sass-loader'
+				}]
+			},
+			{
+				test: /\.(woff2?|svg)$/,
+				 use: [{
+					 loader: 'url-loader?limit=10000'
+				 }]
+			 },
+    	{
+				test: /\.(ttf|eot)$/,
+				 use: [{
+					 loader: 'file-loader'
+				 }]
+			 },
+			 // Bootstrap 3
+    	{
+				test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+				use: [{
+					loader: 'imports-loader?jQuery=jquery'
 				}]
 			},
 		]
