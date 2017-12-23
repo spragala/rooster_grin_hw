@@ -5,8 +5,28 @@
 .checkerboard-row-1 {
   margin: 85px 0 70px 0;
 
+  @media (max-width: $break-med) {
+    margin: 50px 0;
+  }
+
+  .col-3:first-child {
+    margin-right: 0;
+
+    @media (max-width: $break-med) {
+      margin-right: 20px;
+    }
+  }
+
   .checkerboard-content {
     margin: 0 auto;
+  }
+}
+
+.checkerboard-row-2 > .col-3:last-child {
+  margin-right: 0;
+
+  @media (max-width: $break-sm) {
+    margin-right: 20px;
   }
 }
 
@@ -16,4 +36,16 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: $break-med) {
+    transform: none;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $break-sm) {
+    width: 100%;
+  }
 }

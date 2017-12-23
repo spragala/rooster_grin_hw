@@ -108,6 +108,10 @@ p {
   justify-content: center;
 }
 
+.order-first {
+  order: -1;
+}
+
 // Custom Columns
 .col-1 {
   width: 944px;
@@ -121,16 +125,12 @@ p {
 
 .col-3 {
   width: 50%;
-  margin: 0 30px 0 0;
-
-  &:last-of-type {
-    margin-right: 0px;
-  }
+  margin-right: 30px;
 }
 
 // Break points
 $break-med: 944px;
-$break-sm: 425px;
+$break-sm: 490px;
 
 @media (max-width: $break-med) {
   .flex {
@@ -144,7 +144,17 @@ $break-sm: 425px;
 
   .col-2 {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
+  .col-3 {
+    width: auto;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: $break-sm) {
+  .title {
+    margin: 50px 0;
+  }
 }
