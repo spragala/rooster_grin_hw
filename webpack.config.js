@@ -48,13 +48,13 @@ module.exports = {
 			 },
 			// images
 			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif)$/i,
 				use: 'file-loader?name=[name].[ext]&outputPath=images/'
 			},
 			{
 				test: /\.(scss)$/,
 				use: [{
-					loader: 'style-loader'
+					loader: 'style-loader?fixUrls'
 				}, {
 					loader: 'css-loader'
 				}, {
