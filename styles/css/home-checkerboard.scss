@@ -1,0 +1,19 @@
+#checkerboard {
+  margin-bottom: 134px;
+}
+
+.checkerboard-row-1 {
+  margin: 85px 0 70px 0;
+
+  .checkerboard-content {
+    margin: 0 auto;
+  }
+}
+
+.checkerboard-content {
+  width: 465px;
+  padding-left: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -26,6 +26,10 @@ body {
   -webkit-font-smoothing: antialiased
 }
 
+.img {
+  width: 100%
+}
+
 // Headings
 .hero-image-text {
   font-size: 48px;
@@ -40,6 +44,12 @@ body {
   letter-spacing: 2px;
 }
 
+.title {
+  text-align: center;
+  margin-top: 114px;
+  margin-bottom: 52px;
+}
+
 .bold-orange {
   color: $orange;
   font-weight: bold;
@@ -51,11 +61,15 @@ body {
 
 h1, h2 {
   font-size: 28px;
+  color: $orange;
+  margin: 0 0 4px 0;
 }
 
 h3 {
   font-size: 20px;
   letter-spacing: 2px;
+  color: $ochre;
+  margin: 0 0 36px 0;
 }
 
 // Plain Text
@@ -105,6 +119,15 @@ p {
   margin: 0;
 }
 
+.col-3 {
+  width: 50%;
+  margin: 0 30px 0 0;
+
+  &:last-of-type {
+    margin-right: 0px;
+  }
+}
+
 // Break points
 $break-med: 944px;
 $break-sm: 425px;
@@ -123,4 +146,5 @@ $break-sm: 425px;
     width: 100%;
     padding: 0 10px;
   }
+
 }
