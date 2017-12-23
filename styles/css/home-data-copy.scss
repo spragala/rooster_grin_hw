@@ -22,10 +22,45 @@
   text-align: center;
 
   .percentage {
-    width: 114px;
+    width: 142px;
 
     p {
       color: $orange;
+    }
+  }
+}
+
+@media(max-width: $break-med) {
+  .data-title {
+    margin-top: 52px;
+  }
+
+  .data-button > .btn {
+    transform: none;
+    margin-top: 52px;
+  }
+
+  .level {
+    margin-top: 52px;
+    padding: 0 10px;
+  }
+}
+
+@media(max-width: $break-sm) {
+  .level {
+    flex-direction: column;
+
+    .percentage {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 36px;
+      text-align: left;
+    }
+
+    p {
+      margin-left: 20px;
     }
   }
 }

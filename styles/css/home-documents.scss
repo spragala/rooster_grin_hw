@@ -33,3 +33,10 @@
     padding-right: 10px;
   }
 }
+
+@media (max-width: $break-sm) {
+  .media {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
