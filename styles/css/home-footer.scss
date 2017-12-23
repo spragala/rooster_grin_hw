@@ -1,0 +1,11 @@
+.footer-content {
+  text-align: center;
+  height: 105px;
+  background: #EEE;
+
+  p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
