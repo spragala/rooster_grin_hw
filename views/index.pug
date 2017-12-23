@@ -6,22 +6,12 @@ html
     
   body
     include includes/nav.pug
-    include includes/hero.pug
-    include includes/documents.pug
-    include includes/personalize.pug
-    include includes/data-copy.pug
-    include includes/checkerboard.pug
-    include includes/footer.pug
-      
-    .modal.fade#modal(tabindex="-1" role="dialog" aria-hidden="true")
-      .modal-dialog(role="document")
-        .modal-content
-          .modal-header
-            p.modal-title This is the title
-            button.close(type="button" data-dismiss="modal" aria-label="Close")
-              span(aria-hidden="true")
-          .modal-body
-            p content
-          .modal-footer
-            button.btn.btn-secondary(type="button" data-dismiss="modal") Close        
+    .page-wrapper
+      include includes/hero.pug
+      include includes/documents.pug
+      include includes/personalize.pug
+      include includes/data-copy.pug
+      include includes/checkerboard.pug
+      include includes/footer.pug
+      include includes/modal.pug       
       

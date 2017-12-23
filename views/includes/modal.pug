@@ -1,0 +1,22 @@
+.modal.fade#modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog(role="document")
+    .modal-content
+      .modal-header
+        h2 LOREM IPSUM 
+      .modal-body
+        form
+          .form-group
+            label(for="Your Name") Your name
+            input.form-control.input-lg(type="text")
+          .flex
+            .form-group.input
+              label(for="Email") Email
+              input.form-control.input-lg(type="email")
+            .form-group.input
+              label(for="Phone") Phone Number
+              input.form-control.input-lg(type="tel")
+          .textarea      
+            label(for="Message") Message      
+            textarea.form-control.input-lg(rows="6")         
+      .modal-footer
+        button.btn.btn-secondary(type="button" data-dismiss="modal") Button 

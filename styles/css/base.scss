@@ -26,6 +26,13 @@ body {
   -webkit-font-smoothing: antialiased
 }
 
+label {
+  margin-left: 10px;
+  color: $white;
+  font-weight: normal;
+  font-size: 16px;
+}
+
 .img {
   width: 100%
 }
@@ -131,6 +138,17 @@ p {
 // Break points
 $break-med: 944px;
 $break-sm: 490px;
+
+@media (min-width: 1440px) {
+  .page-wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .carousel-overlay, .carousel-fill {
+    max-width: 1440px;
+  }
+}
 
 @media (max-width: $break-med) {
   .flex {
