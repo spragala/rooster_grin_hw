@@ -2,6 +2,16 @@
   margin-top: 107px;
 }
 
+.col-2.document-media {
+  width: 517px;
+  padding: 0 45px;
+
+  @media (max-width: $break-med) {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 .media-left {
   padding-right: 50px;
 }

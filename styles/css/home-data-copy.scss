@@ -1,0 +1,31 @@
+.data-title {
+  text-align: center;
+  margin-top: 114px;
+  margin-bottom: 52px;
+}
+
+.data-button {
+  text-align: center;
+
+  .btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.level {
+  margin-top: 114px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  .percentage {
+    width: 114px;
+
+    p {
+      color: $orange;
+    }
+  }
+}
