@@ -92,6 +92,7 @@ p {
 
 // Break points
 $break-med: 944px;
+$break-sm: 425px;
 
 @media (max-width: $break-med) {
   .flex {
@@ -100,10 +101,11 @@ $break-med: 944px;
 
   .col-1 {
     max-width: 100%;
+    margin: 0;
   }
 
   .col-2 {
     width: 100%;
-    margin: 0 10px;
+    margin: 0;
   }
 }

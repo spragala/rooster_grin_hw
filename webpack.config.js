@@ -33,21 +33,6 @@ module.exports = {
 					loader: "pug-html-loader"
 				}]
       },
-			{
-				test: /\.(scss)$/,
-				use: [{
-					loader: 'style-loader'
-				}, {
-					loader: 'css-loader'
-				}, {
-					loader: 'sass-loader'
-				}]
-			},
-			// images
-			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: 'file-loader?name=[name].[ext]&outputPath=images/'
-			},
 			// bootstrap fonts
 			{
 				test: /\.(woff2?|svg)$/,
@@ -61,6 +46,21 @@ module.exports = {
 					 loader: 'file-loader'
 				 }]
 			 },
+			// images
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				use: 'file-loader?name=[name].[ext]&outputPath=images/'
+			},
+			{
+				test: /\.(scss)$/,
+				use: [{
+					loader: 'style-loader'
+				}, {
+					loader: 'css-loader'
+				}, {
+					loader: 'sass-loader'
+				}]
+			},
 			 // Bootstrap 3
     	{
 				test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
