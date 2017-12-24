@@ -1,4 +1,4 @@
-// CTA animation
+// CTA pulse animation
 
 .pulse, .pulse2 {
   position: fixed;
@@ -8,6 +8,10 @@
   height: 40px;
   border-radius: 50%;
   z-index: 5;
+
+  @media (max-width: $break-med) {
+    top: 125px;
+  }
 }
 
 .pulse {
@@ -50,7 +54,8 @@
   }
 }
 
+// fade-in class for checkerboard
+
 .visible {
   opacity: 1 !important;
-  transform: translate(0,0) !important;
 }

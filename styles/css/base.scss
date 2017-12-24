@@ -15,7 +15,8 @@ $hero-grad: linear-gradient(90deg, #F36819, #000);
 $orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
 
 // Shadow
-$shadow: 0px 2px 4px rgba(0,0,0,0.5);
+$shadow: 0px 2px 4px rgba(#000, 0.5);
+$shadow-long: 0 12px 5px -6px rgba(#000, 0.3);
 
 // Body Style
 body {
@@ -97,11 +98,20 @@ p {
   padding: 10px 0;
   border: none;
   border-radius: 5px;
+  transition: transform .2s ease, box-shadow .2s ease;
   box-shadow: $shadow;
 
   &:hover {
     color: $white;
     background: $orange;
+    box-shadow: $shadow-long;
+    transform: scale3d(1.02,1.02,1.1);
+  }
+
+  &:active {
+    transform: scale3d(1,1,1);
+    box-shadow: $shadow;
+    transition: transform .2s ease, box-shadow .2s ease;
   }
 }
 
@@ -134,7 +144,6 @@ p {
   width: 50%;
   margin-right: 30px;
   opacity: 0;
-  transform: translate(45px, 0);
   transition: all 1.5s;
 }
 
