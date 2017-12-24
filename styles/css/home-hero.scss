@@ -60,6 +60,12 @@ div.btn.cta {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-top: 7px;
+  z-index: 6;
+
+  img.envelope {
+    cursor: pointer;
+  }
+
 
   @media (max-width: $break-med) {
     top: 125px;

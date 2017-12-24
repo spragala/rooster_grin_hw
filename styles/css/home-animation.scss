@@ -1,0 +1,56 @@
+// CTA animation
+
+.pulse, .pulse2 {
+  position: fixed;
+  right: 5px;
+  top: 402px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(247,147,29, 0.9);
+    }
+    70% {
+      box-shadow: 0 0 0 20px rgba(247,147,29, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(247,147,29, 0);
+    }
+  }
+
+  &:hover {
+    animation: none;
+  }
+}
+
+.pulse2 {
+  animation: pulse-two 2s .5s infinite;
+
+  @keyframes pulse-two {
+    0% {
+      box-shadow: 0 0 0 0 rgba(247,147,29, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 30px rgba(247,147,29, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(247,147,29, 0);
+    }
+  }
+
+  &:hover {
+    animation: none;
+  }
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translate(0,0) !important;
+}
