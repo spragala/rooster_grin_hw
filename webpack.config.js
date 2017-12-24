@@ -25,6 +25,7 @@ module.exports = {
 //Add loaders
 	module: {
 		loaders: [
+			// pug loader
       {
         test: /\.pug$/,
         use: [{
@@ -33,7 +34,7 @@ module.exports = {
 					loader: "pug-html-loader"
 				}]
       },
-			// bootstrap fonts
+			// fonts
 			{
 				test: /\.(woff2?|svg)$/,
 				 use: [{
@@ -54,7 +55,7 @@ module.exports = {
 			{
 				test: /\.(scss)$/,
 				use: [{
-					loader: 'style-loader?fixUrls'
+					loader: 'style-loader?fixUrls' //fixUrls to load svg from scss
 				}, {
 					loader: 'css-loader'
 				}, {
