@@ -50,7 +50,7 @@
   }
 }
 
-div.btn.cta {
+.cta {
   position: fixed;
   right: 0;
   top: 402px;
@@ -63,6 +63,10 @@ div.btn.cta {
 
   img.envelope {
     cursor: pointer;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
   }
 
   @media (max-width: $break-med) {

@@ -4,7 +4,6 @@ import Styles from '../styles/main.scss'
 
 // Slide-in on Checkerboard Section
 $(document).on('scroll', function () {
-
   var pageTop = $(document).scrollTop();
   var pageBottom = pageTop + $(window).height();
 
@@ -12,11 +11,31 @@ $(document).on('scroll', function () {
     var $target = $(this);
     var targetTop = $target.offset().top;
 
-    if (targetTop < pageBottom - 100) {
+    if (targetTop < pageBottom - 150) {
       $target.addClass('visible');
     } else {
       $target.removeClass('visible');
     }
   });
-
 });
+
+// Clear form inputs
+$('#modal-btn').on('click', function () {
+  $('form')[0].reset();
+});
+
+// fix CTA button && pulse at pg width if window is larger than 1440px
+$(window).on('resize', function () {
+  if ($(window).width() > 1440) {
+    var newWindWidth = $(window).width();
+    var startLeftPos = $('.cta').position().left;
+    var rightPgEdge = Math.floor(Math.abs(newWindWidth - 1440)/2);
+    var rightPos = newWindWidth - rightPgEdge;
+    var newPos = rightPos - 50 + 'px';
+    var newPulsePos = rightPos - 45 + 'px'
+    $('.cta').css({left: newPos});
+    $('.pulse, .pulse2').css({left: newPulsePos});
+  } else {
+    $('.cta, .pulse, .pulse2').removeAttr('style');
+  }
+})
