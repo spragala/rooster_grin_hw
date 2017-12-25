@@ -32,10 +32,32 @@ $(window).on('resize', function () {
     var rightPgEdge = Math.floor(Math.abs(newWindWidth - 1440)/2);
     var rightPos = newWindWidth - rightPgEdge;
     var newPos = rightPos - 50 + 'px';
-    var newPulsePos = rightPos - 45 + 'px'
+    var newPulsePos = rightPos - 45 + 'px';
     $('.cta').css({left: newPos});
     $('.pulse, .pulse2').css({left: newPulsePos});
   } else {
     $('.cta, .pulse, .pulse2').removeAttr('style');
   }
-})
+});
+
+// Remove pulsing once CTA button is clicked
+$('.cta').on('click', function () {
+  $('.pulse').removeClass('pulse');
+  $('.pulse2').removeClass('pulse2');
+});
+
+// Number counting animation
+$('.data-button > .btn').on('click', function () {
+  //Hat-tip to S. Shivasurya
+  $('.count').each(function () {
+      $(this).prop('Counter', 100).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 7000,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
+  });
+});
