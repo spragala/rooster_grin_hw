@@ -117,13 +117,13 @@ p {
     color: $white;
     background: $orange;
     box-shadow: $shadow-long;
-    transform: scale3d(1.02,1.02,1.1);
+    transform: scale3d(1.02, 1.02, 1.1);
   }
 
   &:active {
     transform: scale3d(1,1,1);
     box-shadow: $shadow;
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition: transform .4s ease, box-shadow .2s ease;
   }
 }
 
