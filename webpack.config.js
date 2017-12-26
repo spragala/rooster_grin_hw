@@ -21,13 +21,13 @@ module.exports = {
 			template: './views/index.pug',
 			inject: true
 		}),
-		new webpack.DefinePlugin({
-			'process.env' : {
-				'NODE_ENV': JSON.stringify('production')
-			}
-		}),
-		new webpack.optimize.UglifyJsPlugin(),
-		new webpack.NoEmitOnErrorsPlugin(),
+		// new webpack.DefinePlugin({
+		// 	'process.env' : {
+		// 		'NODE_ENV': JSON.stringify('production')
+		// 	}
+		// }),
+		// new webpack.optimize.UglifyJsPlugin(),
+		// new webpack.NoEmitOnErrorsPlugin(),
 	],
 //Add loaders
 	module: {
