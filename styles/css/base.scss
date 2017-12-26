@@ -2,21 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 $roboto-font: 'Roboto', sans-serif;
 
+
 // Colors
 $dark-blue: #283647;
 $blue: #1676DD;
 $orange: #F36819;
 $ochre: #F7931D;
-$white: #fff;
+$white: #FFF;
+$light-grey: #EEE;
+
 
 // Gradients
 $blue-grad: linear-gradient(90deg, $blue, #0C4078);
 $hero-grad: linear-gradient(90deg, #F36819, #000);
 $orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
 
+
 // Shadow
 $shadow: 0px 2px 4px rgba(#000, 0.5);
 $shadow-long: 0 12px 5px -6px rgba(#000, 0.3);
+
 
 // Body Style
 body {
@@ -37,6 +42,11 @@ label {
 .img {
   width: 100%
 }
+
+.page-wrapper {
+  background: $white;
+}
+
 
 // Headings
 .hero-image-text {
@@ -80,12 +90,14 @@ h3 {
   margin: 0 0 36px 0;
 }
 
+
 // Plain Text
 p {
   line-height: 20px;
   font-size: 14px;
   margin: 0;
 }
+
 
 // Buttons
 .btn {
@@ -115,6 +127,7 @@ p {
   }
 }
 
+
 // Flex Classes
 .flex {
   display: flex;
@@ -128,6 +141,7 @@ p {
 .order-first {
   order: -1;
 }
+
 
 // Custom Columns
 .col-1 {
@@ -144,22 +158,24 @@ p {
   width: 50%;
   margin-right: 30px;
   opacity: 0;
-  transition: all 1.6s ease;
-  transform: translateY(-50px);
+  transition: all 1.75s ease;
+  transform: translateY(75px);
 }
 
+
 // Break points
+$break-full: 1440px;
 $break-med: 944px;
 $break-sm: 490px;
 
-@media (min-width: 1440px) {
+@media (min-width: $break-full) {
   .page-wrapper {
-    width: 1440px;
+    width: $break-full;
     margin: 0 auto;
   }
 
-  .carousel-overlay, .carousel-fill {
-    max-width: 1440px;
+  .carousel-overlay, .carousel-fill, footer {
+    max-width: $break-full;
   }
 }
 

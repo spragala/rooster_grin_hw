@@ -1,11 +1,23 @@
+footer {
+  background: $light-grey;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .footer-content {
   text-align: center;
-  height: 105px;
-  background: #EEE;
+  height: 175px;
 
   p {
     position: relative;
+    color: $ochre;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .orange {
+    color: $orange;
   }
 }

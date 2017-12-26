@@ -7,14 +7,14 @@ $(document).on('scroll', function () {
   var pageTop = $(document).scrollTop();
   var pageBottom = pageTop + $(window).height();
 
-  $.each($('.col-3'), function() {
+  $.each($('.col-3'), function () {
     var $target = $(this);
     var targetTop = $target.offset().top;
 
-    if (targetTop < pageBottom - 150) {
-      $target.addClass('visible');
+    if (targetTop < pageBottom - 100) {
+      $target.addClass('visible show');
     } else {
-      $target.removeClass('visible');
+      $target.removeClass('visible show');
     }
   });
 });

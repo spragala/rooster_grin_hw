@@ -40,6 +40,10 @@
   .data-button > .btn {
     transform: none;
     margin-top: 52px;
+
+    &:hover {
+      transform: scale3d(1.02,1.02,1.1)
+    }
   }
 
   .level {
