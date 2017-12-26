@@ -20,7 +20,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './views/index.pug',
 			inject: true
-		})
+		}),
+		new webpack.DefinePlugin({
+			'process.env' : {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.NoEmitOnErrorsPlugin(),
 	],
 //Add loaders
 	module: {
@@ -29,7 +36,7 @@ module.exports = {
       {
         test: /\.pug$/,
         use: [{
-					loader: "raw-loader"
+					loader: "html-loader"
 				}, {
 					loader: "pug-html-loader"
 				}]
@@ -50,7 +57,9 @@ module.exports = {
 			// images
 			{
 				test: /\.(jpe?g|png|gif)$/i,
-				use: 'file-loader?name=[name].[ext]&outputPath=images/'
+				use: [{
+					loader: 'file-loader?name=[name].[ext]&outputPath=images/'
+				}]
 			},
 			{
 				test: /\.(scss)$/,

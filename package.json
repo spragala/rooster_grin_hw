@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "prod": "webpack -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "NODE_ENV=production node server.js",
+    "build": "webpack --config webpack.config.js -p --colors"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "express": "^4.16.2",
+    "html-loader": "^0.5.1"
   }
 }
