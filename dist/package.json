@@ -1,0 +1,10 @@
+{
+ "name": "front-end-dev test",
+ "version": "1.0.0",
+ "description": "RoosterGrin front-end dev HW.",
+ "author": "Matt Sprague",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}
