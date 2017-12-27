@@ -3,6 +3,9 @@
 $roboto-font: 'Roboto', sans-serif;
 
 
+//--- Variables ---//
+
+
 // Colors
 $dark-blue: #283647;
 $blue: #1676DD;
@@ -11,16 +14,22 @@ $ochre: #F7931D;
 $white: #FFF;
 $light-grey: #EEE;
 
-
 // Gradients
 $blue-grad: linear-gradient(90deg, $blue, #0C4078);
 $hero-grad: linear-gradient(90deg, #F36819, #000);
 $orange-grad: linear-gradient(90deg, #F36819, #F6C24C);
 
-
 // Shadow
 $shadow: 0px 2px 4px rgba(#000, 0.5);
 $shadow-long: 0 12px 5px -6px rgba(#000, 0.3);
+
+// Break points
+$break-full: 1440px;
+$break-med: 944px;
+$break-sm: 490px;
+
+
+//--- Styles ---//
 
 
 // Body Style
@@ -46,7 +55,6 @@ label {
 .page-wrapper {
   background: $white;
 }
-
 
 // Headings
 .hero-image-text {
@@ -90,14 +98,12 @@ h3 {
   margin: 0 0 36px 0;
 }
 
-
 // Plain Text
 p {
   line-height: 20px;
   font-size: 14px;
   margin: 0;
 }
-
 
 // Buttons
 .btn {
@@ -113,11 +119,13 @@ p {
   transition: transform .2s ease, box-shadow .2s ease;
   box-shadow: $shadow;
 
-  &:hover {
-    color: $white;
-    background: $orange;
-    box-shadow: $shadow-long;
-    transform: scale3d(1.02, 1.02, 1.1);
+  @media (hover:hover) {
+    &:hover {
+      color: $white;
+      background: $orange;
+      box-shadow: $shadow-long;
+      transform: scale3d(1.02, 1.02, 1.1);
+    }
   }
 
   &:active {
@@ -126,6 +134,13 @@ p {
     transition: transform .4s ease, box-shadow .2s ease;
   }
 }
+
+.btn-warning.active, .btn-warning:active {
+  background-color: $orange  !important;
+}
+
+
+//-- Grid System --//
 
 
 // Flex Classes
@@ -141,7 +156,6 @@ p {
 .order-first {
   order: -1;
 }
-
 
 // Custom Columns
 .col-1 {
@@ -163,10 +177,8 @@ p {
 }
 
 
-// Break points
-$break-full: 1440px;
-$break-med: 944px;
-$break-sm: 490px;
+//--- Media Queries ---//
+
 
 @media (min-width: $break-full) {
   .page-wrapper {
@@ -203,5 +215,10 @@ $break-sm: 490px;
 @media (max-width: $break-sm) {
   .title {
     margin: 50px 0;
+  }
+
+  .btn-warning.active, .btn-warning:active {
+    background-color: $ochre  !important;
+    border: 2px solid $orange;
   }
 }

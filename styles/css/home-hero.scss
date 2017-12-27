@@ -73,3 +73,19 @@
     top: 125px;
   }
 }
+
+@media (max-width: $break-sm) {
+  .carousel-fill {
+      height: 400px;
+  }
+
+  .carousel-item.item {
+    img {
+      height: 400px;
+    }
+  }
+
+  .carousel-content {
+    padding-top: 150px; 
+  }
+}

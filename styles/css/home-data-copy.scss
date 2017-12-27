@@ -1,3 +1,7 @@
+
+//--- Data-Copy Section ---//
+
+
 .data-button {
   text-align: center;
 
@@ -53,6 +57,10 @@
 }
 
 @media(max-width: $break-sm) {
+  .data-content {
+    text-align: center;
+  }
+
   .level {
     flex-direction: column;
 
@@ -68,5 +76,9 @@
     p {
       margin-left: 20px;
     }
+  }
+
+  .percentage:last-child {
+    margin-bottom: 0;
   }
 }

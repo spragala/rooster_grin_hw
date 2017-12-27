@@ -24,17 +24,20 @@ $('#modal-btn').on('click', function () {
   $('form')[0].reset();
 });
 
-// fix CTA button && pulse at pg width if window is larger than 1440px
+// fix the CTA button at the max page width
+// if window is larger than 1440px
 $(window).on('resize', function () {
   if ($(window).width() > 1440) {
+
     var newWindWidth = $(window).width();
-    var startLeftPos = $('.cta').position().left;
     var rightPgEdge = Math.floor(Math.abs(newWindWidth - 1440)/2);
     var rightPos = newWindWidth - rightPgEdge;
-    var newPos = rightPos - 50 + 'px';
-    var newPulsePos = rightPos - 45 + 'px';
-    $('.cta').css({left: newPos});
-    $('.pulse, .pulse2').css({left: newPulsePos});
+
+    var left = rightPos - 50 + 'px';
+    var pulseLeft = rightPos - 45 + 'px';
+
+    $('.cta').css({left: left});
+    $('.pulse, .pulse2').css({left: pulseLeft});
   } else {
     $('.cta, .pulse, .pulse2').removeAttr('style');
   }

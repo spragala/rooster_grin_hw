@@ -9,25 +9,17 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: '[name].bundle.js'
+		filename: '[name].bundle.js' //for multiple entries
 	},
 	watch: true,
 	devServer: {
 		inline: true
 	},
-// Plugin to use .pug template
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './views/index.pug',
 			inject: true
 		}),
-		// new webpack.DefinePlugin({
-		// 	'process.env' : {
-		// 		'NODE_ENV': JSON.stringify('production')
-		// 	}
-		// }),
-		// new webpack.optimize.UglifyJsPlugin(),
-		// new webpack.NoEmitOnErrorsPlugin(),
 	],
 //Add loaders
 	module: {
@@ -58,6 +50,7 @@ module.exports = {
 			{
 				test: /\.(jpe?g|png|gif)$/i,
 				use: [{
+					//names instead of hashes && output path to images dir
 					loader: 'file-loader?name=[name].[ext]&outputPath=images/'
 				}]
 			},

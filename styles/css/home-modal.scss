@@ -22,6 +22,10 @@
   padding: 0 15px;
 }
 
+.glyphicon-send {
+  font-size: 13px;
+}
+
 .input {
   width: 263px;
 
@@ -49,5 +53,11 @@
 
   .modal-content {
     width: auto;
+  }
+}
+
+@media (max-width: $break-sm) {
+  .modal-dialog {
+    margin: 50px auto;
   }
 }

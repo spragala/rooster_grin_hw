@@ -1,3 +1,7 @@
+
+//--- Personalize Everything Section ---//
+
+
 .personalize-content {
   text-align: center;
   height: 254px;
@@ -23,7 +27,7 @@
   }
 
   @media (max-width: $break-sm) {
-    padding: 50px 10px;
+    padding: 65px 10px;
   }
 }
 
@@ -31,5 +35,5 @@
   margin-top: 10px;
   background: url('../assets/slanted-gradient-background.svg') no-repeat center center;
   background-size: cover;
-  box-shadow: 2px 6px 6px -3px rgba(0,0,0,0.5);
+  box-shadow: 2px 6px 6px -3px rgba(#000, 0.5);
 }
